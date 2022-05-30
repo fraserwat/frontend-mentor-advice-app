@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'NuxtTutorial',
   data () {
@@ -18,7 +20,16 @@ export default {
       adviceText: "It is easy to sit up and take notice, what's difficult is getting up and taking action."
     }
   },
+  created () {
+    this.rerollAdviceCall();
+  },
   methods: {
+    async rerollAdviceCall() {
+      const response = await axios.get(`https://api.adviceslip.com/advice`);
+      const data = response.data.slip;
+      this.adviceNo = data.id;
+      this.adviceText = data.advice;
+    }
   }
 }
 </script>
