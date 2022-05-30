@@ -1,0 +1,30 @@
+@import "reset";
+@import "config";
+@import '../../node_modules/gorko/gorko.scss';
+
+
+// IMPORT BLOCKS
+@import "blocks/app-container";
+@import "blocks/reroll";
+
+// IMPORT UTILITIES
+@import "utilities/flex-center";
+@import "utilities/max-width";
+@import "utilities/align-center";
+@import "utilities/rad";
+
+
+// GLOBAL STYLES
+.body {
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+h2 {
+    font-size: clamp(get-size('500'), 4.5vw, get-size('600'));
+    letter-spacing: -0.3px;
+    padding-bottom: 2.5rem;
+}
