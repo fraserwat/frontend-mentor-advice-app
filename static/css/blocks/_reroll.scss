@@ -1,4 +1,6 @@
 .reroll {
+    cursor: pointer;
+    transition: .25s ease-in-out;
     position: absolute;
     bottom: -2rem;
     height: 4rem;
@@ -13,4 +15,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: get-size('600');
+}
+.reroll:hover {
+    box-shadow: 0 0 40px 0 get-color('neon-green');
+}
+.reroll:active {
+    transform: translateY(1.5px);
 }
