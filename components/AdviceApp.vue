@@ -5,7 +5,11 @@
       <h1 class="color-neon-green text-300 gap-bottom-600">Advice #{{ adviceNo }}</h1>
       <h2 class="color-light-cyan">“{{ adviceText }}”</h2>
     </div>
-    <button class="[ reroll ] [ bg-neon-green ]" @click="rerollAdviceCall"/>
+    <button 
+      class="[ reroll ] [ bg-neon-green ]"
+      aria-label="Get New Advice" 
+      @click="rerollAdviceCall"
+    />
   </section>
 </template>
 
